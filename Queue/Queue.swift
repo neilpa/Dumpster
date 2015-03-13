@@ -84,14 +84,51 @@ extension Queue : SequenceType {
     }
 }
 
+// MARK: CollectionType
+
+extension Queue : CollectionType {
+    typealias Index = QueueIndex<T>
+
+    public var startIndex: Index {
+        return QueueIndex(head)
+    }
+
+    public var endIndex: Index {
+        return QueueIndex(tail?.next)
+    }
+
+    public subscript(index: Index) -> T {
+        return index.node!.value
+    }
+}
+
+// MARK: QueueIndex
+
+public struct QueueIndex<T> : ForwardIndexType {
+    private let node: Node<T>?
+
+    private init(_ node: Node<T>?) {
+        self.node = node
+    }
+
+    public func successor() -> QueueIndex {
+        return QueueIndex(self.node!.next)
+    }
+}
+
+// Compares for equality via pointer identity
+public func == <T> (lhs: QueueIndex<T>, rhs: QueueIndex<T>) -> Bool {
+    return lhs.node === rhs.node
+}
+
 // MARK: Node
 
 /// Singly-linked list of elements in the queue
 private final class Node<T> {
-    let value: T
-    var next: Node<T>?
+    private let value: T
+    private var next: Node<T>?
 
-    init(_ value: T) {
+    private init(_ value: T) {
         self.value = value
     }
 }
