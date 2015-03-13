@@ -9,6 +9,10 @@ public struct Queue<T> : QueueType {
 
     public mutating func enqueue(value: T) {
         let tail = Node(value)
+        if head == nil {
+            head = tail
+        }
+
         self.tail?.next = tail
         self.tail = tail
     }

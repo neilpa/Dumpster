@@ -8,7 +8,23 @@ final class QueueTests: XCTestCase {
 
     func testEmptyQueue() {
         var q = Queue<Int>()
-        XCTAssertNil(q.peek())
-        XCTAssertNil(q.dequeue())
+        assertNil(q.peek())
+        assertNil(q.dequeue())
+    }
+
+    func testEnqueueDequeue() {
+        var q = Queue<Int>()
+        q.enqueue(1)
+        q.enqueue(2)
+        q.enqueue(3)
+
+        assertEqual(q.dequeue(), 1)
+        assertEqual(q.dequeue(), 2)
+        assertEqual(q.peek(), 3)
+
+        q.enqueue(4)
+        assertEqual(q.dequeue(), 3)
+        assertEqual(q.dequeue(), 4)
+        assertNil(q.dequeue())
     }
 }
