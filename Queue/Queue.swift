@@ -47,7 +47,16 @@ public struct Queue<T> : QueueType {
     /// Removes the first element in `Queue` and returns it, `nil` if empty.
     public mutating func dequeue() -> T? {
         let value = first
-        head = head?.next
+
+        // Explicitly check against tail rather than waiting for head to be
+        // nil since this could be a sub-slice of a larger queue.
+        if head === tail {
+            head = nil
+            tail = nil
+        } else {
+            head = head?.next
+        }
+
         return value
     }
 
@@ -101,12 +110,12 @@ extension Queue : CollectionType {
 
     /// Index to the first element of `Queue`
     public var startIndex: Index {
-        return QueueIndex(head)
+        return QueueIndex(node: head)
     }
 
     /// Index past the last element of `Queue`
     public var endIndex: Index {
-        return QueueIndex(tail?.next)
+        return QueueIndex(previous: tail)
     }
 
     /// Returns the element in `Queue` at `index`
@@ -140,7 +149,7 @@ extension Queue : Sliceable {
 
     /// Extract a slice of `Queue`
     public subscript(range: Range<Index>) -> SubSlice {
-        let tail = range.endIndex.node ?? self.tail!
+        let tail = range.endIndex.previous ?? self.tail!
         return Queue(head: range.startIndex.node!, tail: tail)
     }
 }

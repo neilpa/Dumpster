@@ -31,14 +31,14 @@ final class QueueTests: XCTestCase {
 
     func testSliceable() {
         var q: Queue = ["foo", "bar", "baz"]
-        var s = dropFirst(q)
+        let index = q.startIndex.successor()
+        var s = q[index..<index.successor()]
 
         assertEqual(s.dequeue(), "bar")
+        assert(s.isEmpty)
 
         assertEqual(q.dequeue(), "foo")
         assertEqual(q.dequeue(), "bar")
         assertEqual(q.dequeue(), "baz")
-
-        assertEqual(s.dequeue(), "baz")
     }
 }
