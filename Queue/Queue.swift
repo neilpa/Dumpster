@@ -65,6 +65,25 @@ extension Queue : ArrayLiteralConvertible {
     }
 }
 
+// MARK: SequenceType
+
+extension Queue : SequenceType {
+    typealias Generator = GeneratorOf<T>
+
+    /// Create a `Generator` that can enumerate `Queue`
+    public func generate() -> Generator {
+        var node = head
+
+        return Generator {
+            if let value = node?.value {
+                node = node!.next
+                return value
+            }
+            return nil
+        }
+    }
+}
+
 // MARK: Node
 
 /// Singly-linked list of elements in the queue
