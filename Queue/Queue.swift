@@ -52,7 +52,16 @@ public struct Queue<T> : QueueType {
 
     // MARK: Private
 
+    /// Initialize with an explicit `head` and `tail` (e.g. from a slice)
+    private init(head: Node<T>, tail: Node<T>) {
+        self.head = head
+        self.tail = tail
+    }
+
+    /// First element in the `Queue`
     private var head: Node<T>?
+
+    /// Last element in the `Queue`
     private var tail: Node<T>?
 }
 
@@ -120,6 +129,17 @@ extension Queue : ExtensibleCollectionType {
     /// Appends multiple elements to the end of `Queue`
     public mutating func extend<S: SequenceType where S.Generator.Element == T>(values: S) {
         map(values) { self.enqueue($0) }
+    }
+}
+
+// MARK: Sliceable
+
+extension Queue : Sliceable {
+    typealias SubSlice = Queue<T>
+
+    /// Extract a slice of `Queue`
+    public subscript(range: Range<Index>) -> SubSlice {
+        return Queue(head: range.startIndex.node!, tail: range.endIndex.node!)
     }
 }
 
