@@ -110,12 +110,12 @@ extension Queue : CollectionType {
 
     /// Index to the first element of `Queue`
     public var startIndex: Index {
-        return QueueIndex(node: head)
+        return QueueIndex(node: head, last: tail)
     }
 
     /// Index past the last element of `Queue`
     public var endIndex: Index {
-        return QueueIndex(previous: tail)
+        return QueueIndex(previous: tail, last: tail)
     }
 
     /// Returns the element in `Queue` at `index`

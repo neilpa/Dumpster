@@ -32,10 +32,13 @@ final class QueueTests: XCTestCase {
     func testSliceable() {
         var q: Queue = ["foo", "bar", "baz"]
         let index = q.startIndex.successor()
-        var s = q[index..<index.successor()]
+        println(q[index])
+        let end = index.successor()
+        var s = q[index..<end]
 
         assertEqual(s.dequeue(), "bar")
         assert(s.isEmpty)
+        assertNil(s.dequeue())
 
         assertEqual(q.dequeue(), "foo")
         assertEqual(q.dequeue(), "bar")
