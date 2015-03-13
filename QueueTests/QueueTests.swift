@@ -28,4 +28,17 @@ final class QueueTests: XCTestCase {
         assertEqual(q.dequeue(), 4)
         assertNil(q.dequeue())
     }
+
+    func testSliceable() {
+        var q: Queue = ["foo", "bar", "baz"]
+        var s = dropFirst(q)
+
+        assertEqual(s.dequeue(), "bar")
+
+        assertEqual(q.dequeue(), "foo")
+        assertEqual(q.dequeue(), "bar")
+        assertEqual(q.dequeue(), "baz")
+
+        assertEqual(s.dequeue(), "baz")
+    }
 }

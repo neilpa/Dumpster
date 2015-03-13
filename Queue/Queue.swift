@@ -10,7 +10,8 @@ public struct Queue<T> : QueueType {
 
     /// Initializes a `Queue` with a single `value`
     public init(_ value: T) {
-        head = Node(value)
+        let node = Node(value)
+        self.init(head: node, tail: node)
     }
 
     /// Initializes a `Queue` with a sequence of `values`
@@ -139,7 +140,8 @@ extension Queue : Sliceable {
 
     /// Extract a slice of `Queue`
     public subscript(range: Range<Index>) -> SubSlice {
-        return Queue(head: range.startIndex.node!, tail: range.endIndex.node!)
+        let tail = range.endIndex.node ?? self.tail!
+        return Queue(head: range.startIndex.node!, tail: tail)
     }
 }
 
