@@ -1,6 +1,6 @@
 //  Copyright (c) 2015 Neil Pankey. All rights reserved.
 
-public struct Queue<T> {
+public struct Queue<T> : QueueType {
     private var head: Node<T>?
     private var tail: Node<T>?
 

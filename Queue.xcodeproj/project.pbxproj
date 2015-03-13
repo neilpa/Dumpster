@@ -11,6 +11,7 @@
 		D894E2041AB287FC0021FDC2 /* Queue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D894E1F31AB287FC0021FDC2 /* Queue.framework */; };
 		D894E20B1AB287FC0021FDC2 /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894E20A1AB287FC0021FDC2 /* QueueTests.swift */; };
 		D894E2171AB28B050021FDC2 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894E2161AB28B050021FDC2 /* Queue.swift */; };
+		D894E21F1AB296A50021FDC2 /* QueueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894E21E1AB296A50021FDC2 /* QueueType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		D894E2091AB287FC0021FDC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D894E20A1AB287FC0021FDC2 /* QueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
 		D894E2161AB28B050021FDC2 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		D894E21E1AB296A50021FDC2 /* QueueType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			children = (
 				D894E1F81AB287FC0021FDC2 /* Queue.h */,
 				D894E2161AB28B050021FDC2 /* Queue.swift */,
+				D894E21E1AB296A50021FDC2 /* QueueType.swift */,
 				D894E1F61AB287FC0021FDC2 /* Supporting Files */,
 			);
 			path = Queue;
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D894E2171AB28B050021FDC2 /* Queue.swift in Sources */,
+				D894E21F1AB296A50021FDC2 /* QueueType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
