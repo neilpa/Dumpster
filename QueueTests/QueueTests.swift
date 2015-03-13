@@ -29,6 +29,22 @@ final class QueueTests: XCTestCase {
         assertNil(q.dequeue())
     }
 
+    func testArrayLiteralConvertible() {
+        // TODO
+    }
+
+    func testSequenceType() {
+        // TODO
+    }
+
+    func testCollectionType() {
+        // TODO
+    }
+
+    func testExtensibleCollectionType() {
+        // TODO
+    }
+
     func testSliceable() {
         var q: Queue = ["foo", "bar", "baz"]
         let index = q.startIndex.successor()
