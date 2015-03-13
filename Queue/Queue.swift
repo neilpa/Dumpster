@@ -102,6 +102,24 @@ extension Queue : CollectionType {
     }
 }
 
+// MARK: ExtensibleCollectionType
+
+extension Queue : ExtensibleCollectionType {
+    /// Does nothing
+    public mutating func reserveCapacity(amount: Int) {
+    }
+
+    /// Appends an element to the end of `Queue`
+    public mutating func append(value: T) {
+        self.enqueue(value)
+    }
+
+    /// Appends multiple elements to the end of `Queue`
+    public mutating func extend<S: SequenceType where S.Generator.Element == T>(values: S) {
+        map(values) { self.enqueue($0) }
+    }
+}
+
 // MARK: QueueIndex
 
 public struct QueueIndex<T> : ForwardIndexType {
