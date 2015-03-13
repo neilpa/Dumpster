@@ -12,6 +12,8 @@
 		D894E20B1AB287FC0021FDC2 /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894E20A1AB287FC0021FDC2 /* QueueTests.swift */; };
 		D894E2171AB28B050021FDC2 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894E2161AB28B050021FDC2 /* Queue.swift */; };
 		D894E21F1AB296A50021FDC2 /* QueueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894E21E1AB296A50021FDC2 /* QueueType.swift */; };
+		D894E2261AB2996C0021FDC2 /* Assertions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D894E2251AB2994A0021FDC2 /* Assertions.framework */; };
+		D894E2281AB2997D0021FDC2 /* Assertions.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D894E2251AB2994A0021FDC2 /* Assertions.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +26,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D894E2271AB299760021FDC2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				D894E2281AB2997D0021FDC2 /* Assertions.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D894E1F31AB287FC0021FDC2 /* Queue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Queue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D894E1F71AB287FC0021FDC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +48,7 @@
 		D894E20A1AB287FC0021FDC2 /* QueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
 		D894E2161AB28B050021FDC2 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		D894E21E1AB296A50021FDC2 /* QueueType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueType.swift; sourceTree = "<group>"; };
+		D894E2251AB2994A0021FDC2 /* Assertions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Assertions.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D894E2041AB287FC0021FDC2 /* Queue.framework in Frameworks */,
+				D894E2261AB2996C0021FDC2 /* Assertions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +77,7 @@
 				D894E1F51AB287FC0021FDC2 /* Queue */,
 				D894E2071AB287FC0021FDC2 /* QueueTests */,
 				D894E1F41AB287FC0021FDC2 /* Products */,
+				D894E2231AB2994A0021FDC2 /* External */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +126,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D894E2231AB2994A0021FDC2 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				D894E2241AB2994A0021FDC2 /* Mac */,
+			);
+			name = External;
+			path = Carthage/Build;
+			sourceTree = "<group>";
+		};
+		D894E2241AB2994A0021FDC2 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				D894E2251AB2994A0021FDC2 /* Assertions.framework */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -147,6 +182,7 @@
 				D894E1FF1AB287FC0021FDC2 /* Sources */,
 				D894E2001AB287FC0021FDC2 /* Frameworks */,
 				D894E2011AB287FC0021FDC2 /* Resources */,
+				D894E2271AB299760021FDC2 /* CopyFiles */,
 			);
 			buildRules = (
 			);

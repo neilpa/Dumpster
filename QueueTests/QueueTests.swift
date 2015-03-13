@@ -2,6 +2,7 @@
 
 import Queue
 import XCTest
+import Assertions
 
 final class QueueTests: XCTestCase {
 
