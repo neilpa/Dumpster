@@ -34,13 +34,13 @@ public struct Queue<T> : QueueType {
 
     /// Appends an element to the end of `Queue`
     public mutating func enqueue(value: T) {
-        let tail = Node(value)
+        let node = Node(value)
         if head == nil {
-            head = tail
+            head = node
         }
 
-        self.tail?.next = tail
-        self.tail = tail
+        tail?.next = node
+        tail = node
     }
 
     /// Removes the first element in `Queue` and returns it, `nil` if empty.
