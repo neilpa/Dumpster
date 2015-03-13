@@ -89,14 +89,17 @@ extension Queue : SequenceType {
 extension Queue : CollectionType {
     typealias Index = QueueIndex<T>
 
+    /// Index to the first element of `Queue`
     public var startIndex: Index {
         return QueueIndex(head)
     }
 
+    /// Index past the last element of `Queue`
     public var endIndex: Index {
         return QueueIndex(tail?.next)
     }
 
+    /// Returns the element in `Queue` at `index`
     public subscript(index: Index) -> T {
         return index.node!.value
     }
