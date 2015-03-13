@@ -4,6 +4,9 @@ public struct Queue<T> : QueueType {
     private var head: Node<T>?
     private var tail: Node<T>?
 
+    public init() {
+    }
+
     public mutating func enqueue(value: T) {
         let tail = Node(value)
         self.tail?.next = tail
