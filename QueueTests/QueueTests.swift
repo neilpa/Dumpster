@@ -8,9 +8,7 @@ final class QueueTests: XCTestCase {
 
     func testEmptyQueue() {
         var q = Queue<Int>()
-        assert(q.isEmpty)
-        assertNil(q.first)
-        assertNil(q.dequeue())
+        assertEmpty(q)
     }
 
     func testEnqueueDequeue() {
@@ -26,7 +24,7 @@ final class QueueTests: XCTestCase {
         q.enqueue(4)
         assertEqual(q.dequeue(), 3)
         assertEqual(q.dequeue(), 4)
-        assertNil(q.dequeue())
+        assertEmpty(q)
     }
 
     func testArrayLiteralConvertible() {
@@ -48,16 +46,21 @@ final class QueueTests: XCTestCase {
     func testSliceable() {
         var q: Queue = ["foo", "bar", "baz"]
         let index = q.startIndex.successor()
-        println(q[index])
-        let end = index.successor()
-        var s = q[index..<end]
+        var s = q[index..<index.successor()]
 
+        assertEqual(s.first, "bar")
         assertEqual(s.dequeue(), "bar")
-        assert(s.isEmpty)
-        assertNil(s.dequeue())
+        assertEmpty(s)
 
         assertEqual(q.dequeue(), "foo")
         assertEqual(q.dequeue(), "bar")
         assertEqual(q.dequeue(), "baz")
+        assertEmpty(q)
+    }
+
+    func assertEmpty<T>(var q: Queue<T>) {
+        assertEqual(q.isEmpty, true)
+        assertNil(q.first)
+        assertNil(q.dequeue())
     }
 }
