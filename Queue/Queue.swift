@@ -18,6 +18,20 @@ public struct Queue<T> : QueueType {
         map(values) { self.enqueue($0) }
     }
 
+    // MARK: Properties
+
+    /// Returns true if `Queue` is empty.
+    public var isEmpty: Bool {
+        return head == nil
+    }
+
+    /// Returns the element at the head of `Queue`, or `nil` if empty.
+    public var first: T? {
+        return head?.value
+    }
+
+    // MARK: Operations
+
     /// Appends an element to the end of `Queue`
     public mutating func enqueue(value: T) {
         let tail = Node(value)
@@ -31,14 +45,9 @@ public struct Queue<T> : QueueType {
 
     /// Removes the first element in `Queue` and returns it, `nil` if empty.
     public mutating func dequeue() -> T? {
-        let value = peek()
+        let value = first
         head = head?.next
         return value
-    }
-
-    /// Returns the element at the head of `Queue`, or `nil` if empty.
-    public func peek() -> T? {
-        return head?.value
     }
 
     // MARK: Private
@@ -55,6 +64,8 @@ extension Queue : ArrayLiteralConvertible {
         self.init(elements)
     }
 }
+
+// MARK: Node
 
 /// Singly-linked list of elements in the queue
 private final class Node<T> {
