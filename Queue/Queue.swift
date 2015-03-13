@@ -63,16 +63,19 @@ public struct Queue<T> : QueueType {
     // MARK: Private
 
     /// Initialize with an explicit `head` and `tail` (e.g. from a slice)
-    private init(head: Node<T>, tail: Node<T>) {
+    private init(head: Node, tail: Node) {
         self.head = head
         self.tail = tail
     }
 
     /// First element in the `Queue`
-    private var head: Node<T>?
+    private var head: Node?
 
     /// Last element in the `Queue`
-    private var tail: Node<T>?
+    private var tail: Node?
+
+    /// Remaining nodes in the `Queue`
+    internal typealias Node = List<T>
 }
 
 // MARK: ArrayLiteralConvertible
