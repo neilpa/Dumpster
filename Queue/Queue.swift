@@ -144,34 +144,3 @@ extension Queue : Sliceable {
         return Queue(head: range.startIndex.node!, tail: tail)
     }
 }
-
-// MARK: QueueIndex
-
-public struct QueueIndex<T> : ForwardIndexType {
-    private let node: Node<T>?
-
-    private init(_ node: Node<T>?) {
-        self.node = node
-    }
-
-    public func successor() -> QueueIndex {
-        return QueueIndex(self.node!.next)
-    }
-}
-
-// Compares for equality via pointer identity
-public func == <T> (lhs: QueueIndex<T>, rhs: QueueIndex<T>) -> Bool {
-    return lhs.node === rhs.node
-}
-
-// MARK: Node
-
-/// Singly-linked list of elements in the queue
-private final class Node<T> {
-    private let value: T
-    private var next: Node<T>?
-
-    private init(_ value: T) {
-        self.value = value
-    }
-}
