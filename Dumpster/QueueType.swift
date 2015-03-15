@@ -2,6 +2,6 @@
 
 /// Protocol for a FIFO container.
 public protocol QueueType : Poppable {
-    /// Appends an element to the end of `QueueType`
-    mutating func pushLast(element: Element)
+    /// Appends `value` to the end of `QueueType`
+    mutating func pushLast(value: Element)
 }

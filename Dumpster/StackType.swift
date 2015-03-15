@@ -2,6 +2,6 @@
 
 /// Protocol for a LIFO container.
 public protocol StackType : Poppable {
-    /// Prepends an element to the end of `StackType`
-    mutating func pushFirst(element: Element)
+    /// Prepends `value` to the end of `StackType`
+    mutating func pushFirst(value: Element)
 }
