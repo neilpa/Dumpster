@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Queue.xcodeproj">
+      location = "group:Dumpster.xcodeproj">
    </FileRef>
 </Workspace>
