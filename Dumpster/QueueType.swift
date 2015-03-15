@@ -1,8 +1,8 @@
 //  Copyright (c) 2015 Neil Pankey. All rights reserved.
 
-/// Protocol for a FIFO data structure
+/// Protocol for a FIFO container.
 public protocol QueueType {
-    /// Value type stored in `QueueType`
+    /// Value type stored in `QueueType`.
     typealias Element
 
     /// Returns true if `QueueType` is empty.

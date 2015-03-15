@@ -16,6 +16,7 @@
 		D894E2281AB2997D0021FDC2 /* Assertions.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D894E2251AB2994A0021FDC2 /* Assertions.framework */; };
 		D894E22A1AB2BBD90021FDC2 /* QueueIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894E2291AB2BBD90021FDC2 /* QueueIndex.swift */; };
 		D894E22C1AB2BC6A0021FDC2 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894E22B1AB2BC6A0021FDC2 /* List.swift */; };
+		D8B47D331AB52F2400F4DAD2 /* StackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B47D321AB52F2400F4DAD2 /* StackType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D894E2251AB2994A0021FDC2 /* Assertions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Assertions.framework; sourceTree = "<group>"; };
 		D894E2291AB2BBD90021FDC2 /* QueueIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueIndex.swift; sourceTree = "<group>"; };
 		D894E22B1AB2BC6A0021FDC2 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		D8B47D321AB52F2400F4DAD2 /* StackType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				D894E2161AB28B050021FDC2 /* Queue.swift */,
 				D894E2291AB2BBD90021FDC2 /* QueueIndex.swift */,
 				D894E21E1AB296A50021FDC2 /* QueueType.swift */,
+				D8B47D321AB52F2400F4DAD2 /* StackType.swift */,
 				D894E1F61AB287FC0021FDC2 /* Supporting Files */,
 			);
 			path = Dumpster;
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B47D331AB52F2400F4DAD2 /* StackType.swift in Sources */,
 				D894E2171AB28B050021FDC2 /* Queue.swift in Sources */,
 				D894E22A1AB2BBD90021FDC2 /* QueueIndex.swift in Sources */,
 				D894E21F1AB296A50021FDC2 /* QueueType.swift in Sources */,
