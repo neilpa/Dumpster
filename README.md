@@ -1,2 +1,2 @@
-# Queue
-Generic FIFO queue in Swift
+# Dumpster
+Additional container types and functions for Swift.
