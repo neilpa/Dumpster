@@ -1,2 +1,2 @@
 # Dumpster
-Additional container types and functions for Swift.
+Additional container protocols and functions for Swift.
