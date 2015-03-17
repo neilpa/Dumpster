@@ -14,7 +14,7 @@
 		D894E2261AB2996C0021FDC2 /* Assertions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D894E2251AB2994A0021FDC2 /* Assertions.framework */; };
 		D894E2281AB2997D0021FDC2 /* Assertions.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D894E2251AB2994A0021FDC2 /* Assertions.framework */; };
 		D8B47D331AB52F2400F4DAD2 /* StackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B47D321AB52F2400F4DAD2 /* StackType.swift */; };
-		D8B47D351AB53C5400F4DAD2 /* Popable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B47D341AB53C5400F4DAD2 /* Popable.swift */; };
+		D8B47D351AB53C5400F4DAD2 /* Poppable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B47D341AB53C5400F4DAD2 /* Poppable.swift */; };
 		D8D755791AB7DBE8003665DE /* DequeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D755781AB7DBE8003665DE /* DequeType.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,7 @@
 		D894E21E1AB296A50021FDC2 /* QueueType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueType.swift; sourceTree = "<group>"; };
 		D894E2251AB2994A0021FDC2 /* Assertions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Assertions.framework; sourceTree = "<group>"; };
 		D8B47D321AB52F2400F4DAD2 /* StackType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackType.swift; sourceTree = "<group>"; };
-		D8B47D341AB53C5400F4DAD2 /* Popable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popable.swift; sourceTree = "<group>"; };
+		D8B47D341AB53C5400F4DAD2 /* Poppable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poppable.swift; sourceTree = "<group>"; };
 		D8D755781AB7DBE8003665DE /* DequeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DequeType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				D8D755781AB7DBE8003665DE /* DequeType.swift */,
-				D8B47D341AB53C5400F4DAD2 /* Popable.swift */,
+				D8B47D341AB53C5400F4DAD2 /* Poppable.swift */,
 				D894E21E1AB296A50021FDC2 /* QueueType.swift */,
 				D8B47D321AB52F2400F4DAD2 /* StackType.swift */,
 				D894E1F61AB287FC0021FDC2 /* Supporting Files */,
@@ -259,7 +259,7 @@
 			files = (
 				D8B47D331AB52F2400F4DAD2 /* StackType.swift in Sources */,
 				D8D755791AB7DBE8003665DE /* DequeType.swift in Sources */,
-				D8B47D351AB53C5400F4DAD2 /* Popable.swift in Sources */,
+				D8B47D351AB53C5400F4DAD2 /* Poppable.swift in Sources */,
 				D894E21F1AB296A50021FDC2 /* QueueType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
