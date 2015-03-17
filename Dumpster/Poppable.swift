@@ -11,6 +11,6 @@ public protocol Poppable {
     /// Returns the first value in `Poppable`, `nil` if empty.
     var first: Element? { get }
 
-    /// Removes the first value in `Poppable` and returns it, `nil` if empty.
-    mutating func popFirst() -> Element?
+    /// Removes the first value in `Poppable` and returns it.
+    mutating func removeFirst() -> Element
 }
